@@ -10,8 +10,7 @@
   --border: #2a2a2a;
   --radius: 12px;
   --radius-lg: 20px;
-  --font-sans: 'DM Sans', system-ui, sans-serif;
-  --font-display: 'Fraunces', Georgia, serif;
+  --font-sans: 'Source Sans 3', 'Frutiger Linotype', 'Frutiger', 'Segoe UI', system-ui, sans-serif;
   --shadow: 0 4px 24px rgba(0,0,0,0.4);
   --transition: 0.2s ease;
 }
@@ -86,20 +85,40 @@ img { max-width: 100%; height: auto; display: block; }
   justify-content: space-between;
   height: 64px;
 }
+.header-brand {
+  display: flex;
+  align-items: baseline;
+  gap: 0.75rem;
+}
 .logo {
-  font-family: var(--font-display);
   font-size: 1.5rem;
   font-weight: 700;
   color: var(--text);
 }
 .logo:hover { color: var(--primary); }
+.header-tagline {
+  font-size: 0.9rem;
+  font-weight: 400;
+  color: var(--text-muted);
+  display: none;
+}
+@media (min-width: 900px) {
+  .header-tagline { display: inline; }
+}
 .nav {
   display: flex;
   align-items: center;
   gap: 1.5rem;
 }
-.nav a { color: var(--text-muted); }
-.nav a:hover { color: var(--text); }
+.nav a {
+  color: #fff;
+  font-weight: 500;
+}
+.nav a:hover { color: var(--primary-hover); }
+.nav .btn-ghost { color: #fff; }
+.nav .btn-ghost:hover { color: var(--primary); background: transparent; }
+.nav .btn-primary { color: #fff; }
+.nav .btn-primary:hover { color: #fff; }
 .menu-toggle {
   display: none;
   flex-direction: column;
@@ -125,7 +144,6 @@ img { max-width: 100%; height: auto; display: block; }
 }
 .hero-inner { max-width: 720px; margin: 0 auto; }
 .hero-title {
-  font-family: var(--font-display);
   font-size: clamp(2rem, 5vw, 3.25rem);
   font-weight: 700;
   line-height: 1.2;
@@ -143,7 +161,6 @@ img { max-width: 100%; height: auto; display: block; }
 /* ===== Sections ===== */
 .section { padding: 4rem 0; }
 .section-title {
-  font-family: var(--font-display);
   font-size: 2rem;
   font-weight: 700;
   text-align: center;
@@ -170,7 +187,6 @@ img { max-width: 100%; height: auto; display: block; }
 .feature-block.reverse .feature-header { order: 2; }
 .feature-block.reverse .feature-carousel { order: 1; }
 .feature-title {
-  font-family: var(--font-display);
   font-size: 1.5rem;
   font-weight: 600;
   margin: 0 0 0.75rem;
@@ -243,9 +259,9 @@ img { max-width: 100%; height: auto; display: block; }
 .plans { background: var(--bg-secondary); }
 .plans-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: 1.5rem;
-  max-width: 640px;
+  max-width: 960px;
   margin: 0 auto;
 }
 .plan-card {
@@ -255,7 +271,7 @@ img { max-width: 100%; height: auto; display: block; }
   padding: 2rem;
   position: relative;
 }
-.plan-card.featured { border-color: var(--primary); box-shadow: 0 0 0 1px var(--primary); }
+.plan-card.featured { border-color: var(--primary); box-shadow: 0 0 0 2px var(--primary); }
 .plan-badge {
   position: absolute;
   top: -10px;
@@ -268,12 +284,27 @@ img { max-width: 100%; height: auto; display: block; }
   border-radius: 999px;
 }
 .plan-name { font-size: 1.25rem; font-weight: 600; margin: 0 0 0.5rem; }
-.plan-desc { color: var(--text-muted); font-size: 0.9rem; margin: 0 0 1.25rem; }
-.plan-price { margin-bottom: 0.5rem; }
-.price-amount { font-family: var(--font-display); font-size: 2rem; font-weight: 700; }
+.plan-desc { color: var(--text-muted); font-size: 0.9rem; margin: 0 0 0.75rem; }
+.plan-price { margin-bottom: 1rem; }
+.price-amount { font-size: 1.75rem; font-weight: 700; }
 .price-period { color: var(--text-muted); font-size: 0.9rem; }
-.plan-note { font-size: 0.85rem; color: var(--primary); margin-bottom: 1.25rem; }
-.plan-card .btn { margin-top: 0.5rem; }
+.price-special { display: block; font-size: 0.85rem; color: var(--primary); margin-top: 0.25rem; }
+.plan-features {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1.5rem;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+.plan-features li {
+  padding: 0.35rem 0;
+  border-bottom: 1px solid var(--border);
+}
+.plan-features li:last-child { border-bottom: none; }
+.plan-card .btn { margin-top: 0; }
+@media (max-width: 800px) {
+  .plans-grid { grid-template-columns: 1fr; }
+}
 
 /* ===== CTA ===== */
 .cta-section { text-align: center; }

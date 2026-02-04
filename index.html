@@ -5,16 +5,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>LavaOps – Gastronomie & Betriebsmanagement</title>
   <meta name="description" content="LavaOps: Zeiterfassung, Schichtplanung, Warenmanagement und Betriebsergebnis für Gastronomie und Einzelhandel." />
+  <link rel="icon" href="favicon.ico" sizes="any" />
+  <link rel="icon" href="icon.png" type="image/png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
   <!-- Header -->
   <header class="site-header">
     <div class="container header-inner">
-      <a href="/" class="logo">LavaOps</a>
+      <div class="header-brand">
+        <a href="/" class="logo">LavaOps</a>
+        <span class="header-tagline">Gastronomie &amp; Betriebsmanagement</span>
+      </div>
       <nav class="nav">
         <a href="#features">Funktionen</a>
         <a href="#plans">Preise</a>
@@ -147,26 +152,51 @@
   <section id="plans" class="section plans">
     <div class="container">
       <h2 class="section-title">Tarife</h2>
-      <p class="section-lead">Aktuell bieten wir alle Funktionen kostenlos an. Später kommen kostenpflichtige Optionen dazu.</p>
+      <p class="section-lead">Sonderaktion: Starter und Business aktuell kostenlos.</p>
       <div class="plans-grid">
-        <div class="plan-card featured">
-          <div class="plan-badge">Aktuell</div>
+        <div class="plan-card">
           <h3 class="plan-name">Starter</h3>
-          <p class="plan-desc">Zeiterfassung, Schichtplanung, Warenmanagement, Betriebsergebnis.</p>
           <div class="plan-price">
-            <span class="price-amount">0 €</span>
+            <span class="price-amount">0,00 €</span>
             <span class="price-period">/ Monat</span>
           </div>
-          <p class="plan-note">Sonderaktion: Derzeit kostenlos.</p>
+          <ul class="plan-features">
+            <li>1 Restaurant</li>
+            <li>10 Benutzer</li>
+            <li>100 MB Speicher</li>
+            <li>Backup deaktiviert</li>
+          </ul>
+          <a href="https://app.lava-ops.de/register" class="btn btn-outline btn-block">Kostenlos registrieren</a>
+        </div>
+        <div class="plan-card featured">
+          <div class="plan-badge">Sonderangebot</div>
+          <h3 class="plan-name">Business</h3>
+          <div class="plan-price">
+            <span class="price-amount">0,00 €</span>
+            <span class="price-period">/ Monat</span>
+            <span class="price-special">(Sonderaktion)</span>
+          </div>
+          <ul class="plan-features">
+            <li>1 Restaurant</li>
+            <li>10 Benutzer</li>
+            <li>1024 MB Speicher</li>
+            <li>Backups: 7 Tage / 4 Wochen / 1 Monat</li>
+            <li>API zu anderen Plattformen</li>
+          </ul>
           <a href="https://app.lava-ops.de/register" class="btn btn-primary btn-block">Kostenlos registrieren</a>
         </div>
         <div class="plan-card">
-          <h3 class="plan-name">Pro</h3>
-          <p class="plan-desc">Erweiterte Auswertungen, API, Support. (In Vorbereitung)</p>
+          <h3 class="plan-name">Enterprise</h3>
+          <p class="plan-desc">Individuelle Funktionen und Umfang.</p>
           <div class="plan-price">
-            <span class="price-amount">—</span>
+            <span class="price-amount">Auf Anfrage</span>
           </div>
-          <button type="button" class="btn btn-outline btn-block" disabled>Bald verfügbar</button>
+          <ul class="plan-features">
+            <li>Maßgeschneiderte Features</li>
+            <li>Mehr Restaurants / Benutzer</li>
+            <li>Individueller Support</li>
+          </ul>
+          <a href="contact.html" class="btn btn-outline btn-block">Kontakt aufnehmen</a>
         </div>
       </div>
     </div>
